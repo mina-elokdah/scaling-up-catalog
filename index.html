@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تصفح ورش المهارات والذكاء الاصطناعي والكورسات التدريبية من Scaling Up.">
+  <meta name="theme-color" content="#104862">
+  <title>كتالوج التدريب | Scaling Up</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./catalog-data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">انتقل للكتالوج</a>
+  <header class="masthead">
+    <div class="shell nav">
+      <a class="brand" href="#top"><img src="./logo.png" alt="The Scaling Up Consulting and Training"></a>
+      <nav aria-label="التنقل الرئيسي"><a href="#catalog">الكتالوج</a><a href="#booking">طريقة التسجيل</a></nav>
+      <a class="nav-contact" href="#contact">تواصل معنا</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> كتالوج التدريب</p>
+          <h1 id="hero-title">طوّر مهاراتك.<br><em>وطبّق اللي اتعلمته.</em></h1>
+          <p>ورش عملية وكورسات مجمّعة في المهارات والذكاء الاصطناعي. اختار التدريب المناسب ليك، أونلاين أو حضوري.</p>
+          <a class="button primary" href="#catalog">تصفّح التدريبات</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-photo"></div>
+          <div class="hero-caption"><span>تدريب عملي من <b lang="en" dir="ltr">Scaling Up</b></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section shell" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-head">
+        <div><p class="eyebrow"><span></span> الورش والكورسات</p><h2 id="catalog-title">اختار تدريبك</h2></div>
+      </div>
+      <div class="controls">
+        <div class="filters" role="group" aria-label="نوع التدريب">
+          <button type="button" data-filter="all" aria-pressed="true">الكل</button>
+          <button type="button" data-filter="career" aria-pressed="false">البحث عن عمل والاستعداد المهني</button>
+          <button type="button" data-filter="communication" aria-pressed="false">التواصل والتعامل مع الآخرين</button>
+          <button type="button" data-filter="leadership" aria-pressed="false">القيادة وإدارة الفرق والمشاريع</button>
+          <button type="button" data-filter="effectiveness" aria-pressed="false">الإنتاجية والتفكير وحل المشكلات</button>
+          <button type="button" data-filter="ai" aria-pressed="false">ذكاء اصطناعي</button>
+          <button type="button" data-filter="course" aria-pressed="false">كورسات</button>
+        </div>
+        <div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="ابحث عن تدريب…" aria-label="ابحث عن تدريب"></div>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="results" class="grid"></div>
+      <noscript><p>فعّل JavaScript لعرض التدريبات.</p></noscript>
+    </section>
+    <section class="booking" id="booking" aria-labelledby="booking-title">
+      <div class="shell booking-layout">
+        <div><p class="eyebrow"><span></span> التسجيل</p><h2 id="booking-title">من اختيار التدريب<br>لتأكيد الموعد</h2></div>
+        <ol>
+          <li><strong>سجّل اهتمامك على واتساب</strong><p>اختار التدريب وابعتلنا رسالة. فريق Scaling Up هيرد عليك ويبعتلك رابط نموذج التسجيل، وفيه تختار طريقة التنفيذ والمواعيد والمكان اللي يناسبوك.</p></li>
+          <li><strong>هنأكد معاك تفاصيل المجموعة</strong><p>بنتواصل معاك بمكالمة أو واتساب بعد اكتمال المجموعة لتأكيد الموعد والمقر أو رابط الحضور.</p></li>
+          <li><strong>احضر تدريبك</strong><p>التدريب بالعربي مع المصطلحات الإنجليزية المهمة. شهادة حضور مجانية من Scaling Up تُمنح بالحضور.</p></li>
+        </ol>
+        <details class="schedule">
+          <summary>تفضيلات المواعيد والمكان</summary>
+          <p>من الأحد للخميس، من ٦ لـ٩ مساءً. للورش اللي مدتها جلستين، التفضيلات هي السبت والثلاثاء، أو الأحد والأربعاء، أو الاثنين والخميس. للكورسات الأطول بيتحدد الجدول بعد اكتمال المجموعة.</p>
+          <p>حضوري في مقر الشركة بمصر الجديدة أو الدقي، أو أونلاين. حجم المجموعة من ١٥ إلى ٢٠ مشارك.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="shell footer-content">
+      <a class="brand" href="#top"><img src="./logo.png" alt="The Scaling Up Consulting and Training"></a>
+      <div class="contact-links"><a href="tel:+201091097333">اتصل بنا <bdi>01091097333</bdi></a><a href="https://wa.me/201091097333">واتساب</a><a href="https://www.facebook.com/TheScalingUp">فيسبوك</a><a href="https://www.linkedin.com/company/the-scaling-up/">لينكدإن</a></div>
+    </div>
+  </footer>
+  <dialog id="details" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="close" aria-label="إغلاق">×</button></form>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
