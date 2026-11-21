@@ -769,8 +769,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 21,
       "sessions": 7,
-      "online": 1750,
-      "inPerson": 2450
+      "online": 3500,
+      "inPerson": 4900,
+      "careerFair": {
+        "online": 1750,
+        "inPerson": 2450
+      }
     },
     {
       "id": "personal-effectiveness",
@@ -785,8 +789,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 21,
       "sessions": 7,
-      "online": 1750,
-      "inPerson": 2450
+      "online": 3500,
+      "inPerson": 4900,
+      "careerFair": {
+        "online": 1750,
+        "inPerson": 2450
+      }
     },
     {
       "id": "leadership-and-teams",
@@ -801,8 +809,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 33,
       "sessions": 11,
-      "online": 2750,
-      "inPerson": 3850
+      "online": 5500,
+      "inPerson": 7700,
+      "careerFair": {
+        "online": 2750,
+        "inPerson": 3850
+      }
     },
     {
       "id": "decision-and-problem-solving",
@@ -817,8 +829,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 24,
       "sessions": 8,
-      "online": 2000,
-      "inPerson": 2800
+      "online": 4000,
+      "inPerson": 5600,
+      "careerFair": {
+        "online": 2000,
+        "inPerson": 2800
+      }
     },
     {
       "id": "career-readiness",
@@ -833,8 +849,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 24,
       "sessions": 8,
-      "online": 2000,
-      "inPerson": 2800
+      "online": 4000,
+      "inPerson": 5600,
+      "careerFair": {
+        "online": 2000,
+        "inPerson": 2800
+      }
     },
     {
       "id": "customer-and-business",
@@ -849,8 +869,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 27,
       "sessions": 9,
-      "online": 2250,
-      "inPerson": 3150
+      "online": 4500,
+      "inPerson": 6300,
+      "careerFair": {
+        "online": 2250,
+        "inPerson": 3150
+      }
     },
     {
       "id": "ai-at-work",
@@ -866,8 +890,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 36,
       "sessions": 12,
-      "online": 3000,
-      "inPerson": 4200
+      "online": 6000,
+      "inPerson": 8400,
+      "careerFair": {
+        "online": 3000,
+        "inPerson": 4200
+      }
     },
     {
       "id": "project-delivery",
@@ -882,8 +910,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 27,
       "sessions": 9,
-      "online": 2250,
-      "inPerson": 3150
+      "online": 4500,
+      "inPerson": 6300,
+      "careerFair": {
+        "online": 2250,
+        "inPerson": 3150
+      }
     }
   ]
 };
