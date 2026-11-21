@@ -9,6 +9,17 @@ footer{background:var(--dark);color:#EDF7FC;padding:1.8rem 0}.footer-content{dis
 @media(max-width:920px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-visual{min-height:310px}}
 @media(max-width:650px){.shell{width:calc(100% - 2rem)}.nav{min-height:65px}.nav nav{gap:.65rem}.nav-contact{display:none}.hero-layout,.booking-layout{grid-template-columns:1fr}.hero-visual{min-height:230px}.section-head,.controls,.footer-content{align-items:stretch;flex-direction:column}.grid{grid-template-columns:1fr}.schedule{grid-column:1}.filters,.search{flex:auto}.search{min-width:0}.footer-content .brand{align-self:start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.fair-offer{background:#fff7e7;border:1px solid #f2d499;border-radius:.7rem;overflow:hidden}
+.fair-offer .offer-title{background:#ffe9bc;color:#573900;padding:.45rem .65rem;font-size:.91rem;font-weight:750;margin:0}
+.fair-offer .prices{background:transparent;padding:.55rem .65rem}
+.fair-offer .prices>div+div{border-color:#ebd5a6}
+.fair-offer .prices dt{font-weight:750;color:var(--ink)}
+.fair-offer .standard-price,.fair-offer .fair-price{display:grid;gap:.1rem;line-height:1.45;margin-top:.25rem}
+.fair-offer .standard-price span,.fair-offer .fair-price span{color:#62533a;font-size:.79rem;font-weight:500}
+.fair-offer s{color:#62533a;font-size:.87rem;font-weight:550;white-space:nowrap}
+.fair-offer strong{color:var(--dark);font-size:1.13rem;white-space:nowrap}
+.booking-gift{border-inline-start:3px solid var(--blue);border-radius:.45rem;background:#e7f3fa;padding:.55rem .65rem;color:var(--dark)}
+.booking-gift p{margin:.15rem 0 0;color:var(--soft);font-size:.9rem}
 @media(max-width:650px){
   .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
   .filters button{width:100%;min-height:3.55rem;padding:.45rem .5rem;border-radius:.75rem;line-height:1.35;text-align:center}

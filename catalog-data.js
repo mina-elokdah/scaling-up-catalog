@@ -17,8 +17,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "presentations",
@@ -36,8 +40,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "public-speaking",
@@ -55,8 +63,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "time-management",
@@ -74,8 +86,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "leadership",
@@ -93,8 +109,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "teamwork",
@@ -112,8 +132,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "problem-solving",
@@ -131,8 +155,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "critical-thinking",
@@ -150,8 +178,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "decision-making",
@@ -169,8 +201,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "emotional-intelligence",
@@ -188,8 +224,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "conflict-management",
@@ -207,8 +247,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "negotiation",
@@ -226,8 +270,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "stress-management",
@@ -245,8 +293,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "adaptability",
@@ -264,8 +316,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "creativity",
@@ -283,8 +339,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "self-awareness",
@@ -302,8 +362,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "business-etiquette",
@@ -321,8 +385,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "influence",
@@ -340,8 +408,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "email-writing",
@@ -359,8 +431,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "linkedin-profile",
@@ -378,8 +454,12 @@ window.SCALING_UP_CATALOG = {
       "category": "career",
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "cv-from-scratch",
@@ -397,8 +477,12 @@ window.SCALING_UP_CATALOG = {
       "category": "career",
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "job-interview",
@@ -416,13 +500,18 @@ window.SCALING_UP_CATALOG = {
       "category": "career",
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "career-interview",
       "type": "skills",
       "category": "career",
+      "bookingGift": "عند حجز الورشة، ليك جلسة فردية مجانية مدتها ٣٠ دقيقة على Zoom مع أحد متخصصي التوظيف في Scaling Up، لمراجعة سيرتك الذاتية وعمل مقابلة تجريبية.",
       "title": "التخطيط المهني والاستعداد للمقابلات",
       "summary": "ربط الأهداف المهنية بالسيرة الذاتية والملف المهني والاستعداد للمقابلات.",
       "audience": "طلاب الجامعات والخريجون والباحثون عن عمل والراغبون في تغيير المسار",
@@ -435,8 +524,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "customer-service",
@@ -454,8 +547,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "coaching-mentoring",
@@ -473,8 +570,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "cross-cultural",
@@ -492,8 +593,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "project-management",
@@ -511,8 +616,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "networking",
@@ -530,8 +639,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 3,
       "sessions": 1,
-      "online": 250,
-      "inPerson": 350
+      "online": 500,
+      "inPerson": 700,
+      "careerFair": {
+        "online": 250,
+        "inPerson": 350
+      }
     },
     {
       "id": "ai-fundamentals",
@@ -548,8 +661,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "prompt-engineering",
@@ -566,8 +683,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "ai-content",
@@ -584,8 +705,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "ai-productivity",
@@ -602,8 +727,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 6,
       "sessions": 2,
-      "online": 500,
-      "inPerson": 700
+      "online": 1000,
+      "inPerson": 1400,
+      "careerFair": {
+        "online": 500,
+        "inPerson": 700
+      }
     },
     {
       "id": "ai-business",
@@ -620,8 +749,12 @@ window.SCALING_UP_CATALOG = {
       ],
       "hours": 9,
       "sessions": 3,
-      "online": 750,
-      "inPerson": 1050
+      "online": 1500,
+      "inPerson": 2100,
+      "careerFair": {
+        "online": 750,
+        "inPerson": 1050
+      }
     },
     {
       "id": "workplace-communication",

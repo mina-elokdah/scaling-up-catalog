@@ -55,12 +55,34 @@
 
   function prices(item) {
     const list = element("dl", "prices");
-    for (const [label, price] of [["أونلاين", item.online], ["حضوري", item.inPerson]]) {
+    for (const [label, mode] of [["أونلاين", "online"], ["حضوري", "inPerson"]]) {
       const part = element("div");
-      part.append(element("dt", null, label + " · من"), element("dd", null, number.format(price) + " ج.م."));
+      const regular = number.format(item[mode]) + " ج.م.";
+      if (item.careerFair) {
+        part.append(element("dt", null, label));
+        const standard = element("dd", "standard-price");
+        standard.append(element("span", null, "السعر الاساسي"), element("s", null, regular));
+        const discounted = element("dd", "fair-price");
+        discounted.append(
+          element("strong", null, number.format(item.careerFair[mode]) + " ج.م."),
+          element("span", null, "السعر بعد خصم الملتقي")
+        );
+        part.append(standard, discounted);
+      } else {
+        part.append(element("dt", null, label + " · من"), element("dd", null, regular));
+      }
       list.append(part);
     }
-    return list;
+    if (!item.careerFair) return list;
+    const offer = element("section", "fair-offer");
+    offer.append(element("p", "offer-title", "عرض خاص لزوار الملتقى التوظيفي فقط"), list);
+    return offer;
+  }
+
+  function bookingGift(item) {
+    const gift = element("aside", "booking-gift");
+    gift.append(element("strong", null, "نص ساعة هدية مع حجز الورشة"), element("p", null, item.bookingGift));
+    return gift;
   }
 
   function detailList(items) {
@@ -75,6 +97,7 @@
     const title = element("h2", null, item.title);
     title.id = "dialog-title";
     body.append(element("p", "eyebrow", labels[item.category || item.type]), title, element("p", null, item.summary), element("p", "result-count", duration(item)), prices(item));
+    if (item.bookingGift) body.append(bookingGift(item));
     if (item.audience) body.append(element("h3", null, "التدريب مناسب لمين؟"), element("p", null, item.audience));
     if (item.objectives) body.append(element("h3", null, "هتتعلم إيه؟"), detailList(item.objectives));
     if (item.modules) body.append(element("h3", null, "الورش اللي بيشملها الكورس"), detailList(item.modules));
@@ -96,7 +119,9 @@
     details.setAttribute("aria-label", "تفاصيل " + item.title);
     details.addEventListener("click", () => showDetails(item, details));
     actions.append(details, interestButton(item));
-    card.append(header, element("h3", null, item.title), element("p", null, item.summary), prices(item), actions);
+    card.append(header, element("h3", null, item.title), element("p", null, item.summary), prices(item));
+    if (item.bookingGift) card.append(bookingGift(item));
+    card.append(actions);
     return card;
   }
 
