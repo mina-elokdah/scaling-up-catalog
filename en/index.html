@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#104862">
+  <meta name="description" content="Explore a selection of Scaling Up training programmes, courses and workshops. We tailor training to your team's needs, goals and work context.">
+  <title>Training Programmes and Workshops | Scaling Up</title>
+  <style>
+    :root {
+      color-scheme: light; --brand: #104862; --blue: #177cbd; --amber: #f6a822; --brown: #946b35; --green: #94c120;
+      --ink: #10364b; --muted: #405d6d; --paper: #f3f8fb; --line: #d7e4eb; --white: #fff;
+      font: 1rem/1.6 "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    h1, h2, h3, p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    :is(a,button,input):focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    .shell { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+    .skip { position: absolute; z-index: 5; background: var(--amber); padding: .5rem; transform: translateY(-150%); }
+    .skip:focus { transform: none; }
+    .masthead { background: var(--white); border-bottom: 1px solid var(--line); }
+    .nav, .footer-layout { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding-block: .8rem; }
+    .brand { display: inline-flex; align-items: center; flex-shrink: 0; border-radius: .45rem; }
+    .brand img { display: block; width: clamp(112px, 16vw, 174px); height: auto; }
+    .nav nav, .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.5rem; font-size: .95rem; }
+    .nav nav a { padding-block: .35rem; }
+    .nav nav a:hover, .contact-links a:hover { text-decoration: underline; text-underline-offset: .25rem; }
+    .nav-contact { border: 1px solid var(--line); border-radius: 999px; padding: .4rem .9rem; white-space: nowrap; }
+    .hero { padding-block: clamp(2.5rem, 6vw, 5rem); background: var(--brand); color: var(--white); }
+    .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+    .eyebrow { display: flex; align-items: center; gap: .6rem; font-size: .9rem; font-weight: 700; letter-spacing: .015em; }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--green); flex: 0 0 8px; }
+    h1, h2 { letter-spacing: -.04em; }
+    h1 { font-size: clamp(2.75rem, 5vw, 4.6rem); line-height: 1.04; margin: .85rem 0 1.15rem; }
+    h1 span { color: var(--amber); }
+    .hero-copy > p:not(.eyebrow) { max-width: 39rem; color: #e2eff7; font-size: 1.12rem; }
+    .hero-actions, .actions { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+    .hero-actions { margin-top: 1.45rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid transparent; border-radius: .65rem; padding: .55rem .85rem; font-weight: 700; text-align: center; }
+    .primary { color: #192f3c; background: var(--amber); }
+    .primary:hover { background: #ffd17b; }
+    .secondary { background: var(--white); border-color: var(--line); color: var(--ink); }
+    .secondary:hover { background: #e7f3fa; }
+    .hero-link { background: transparent; color: var(--white); border-color: #85a9bb; }
+    .hero-link:hover { background: #185675; }
+    .hero-visual { position: relative; min-height: 330px; overflow: hidden; border-radius: 1.4rem; border-bottom: 4px solid var(--blue); background: #177cbd; }
+    .hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 43%; }
+    .custom { background: #eaf3f9; border-bottom: 1px solid var(--line); padding-block: clamp(1.8rem, 4vw, 3rem); }
+    .custom-layout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2rem; align-items: center; }
+    .custom h2, .section h2 { font-size: clamp(1.8rem, 3.7vw, 2.8rem); line-height: 1.12; margin: .45rem 0 .6rem; }
+    .custom p:not(.eyebrow), .intro { max-width: 48rem; color: var(--muted); }
+    .section { padding-block: clamp(2.7rem, 6vw, 5rem); }
+    .intro { margin-bottom: 1.25rem; }
+    .controls { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: .65rem 1rem; border-block: 1px solid var(--line); padding-block: .85rem; }
+    .filters { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .filters button { border: 1px solid var(--line); border-radius: 2rem; padding: .4rem .75rem; min-height: 44px; color: var(--ink); background: var(--white); font-size: .9rem; font-weight: 650; }
+    .filters button[aria-pressed="true"] { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .search { flex: 1 1 13rem; min-width: 0; max-width: 18rem; border: 1px solid var(--line); border-radius: 2rem; background: var(--white); }
+    .search input { width: 100%; min-height: 44px; border: 0; padding-inline: .9rem; background: transparent; color: var(--ink); border-radius: inherit; }
+    .result-count { margin: .75rem 0; color: var(--muted); font-size: .92rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .training { min-width: 0; display: flex; flex-direction: column; gap: .65rem; padding: 1rem; background: var(--white); border: 1px solid var(--line); border-radius: 1.1rem; }
+    .training h3 { font-size: 1.2rem; line-height: 1.3; }
+    .training p { flex: 1; color: var(--muted); }
+    .meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .35rem .6rem; color: var(--muted); font-size: .87rem; }
+    .tag { display: inline-block; border-radius: 1rem; padding: .15rem .6rem; font-weight: 700; color: #345212; background: #eef5e0; }
+    .tag.career, .tag.course { background: #fff4dd; color: #68461c; }
+    .tag.communication, .tag.ai { background: #e7f3fa; color: var(--brand); }
+    .tag.leadership { background: #f7eee0; color: #68461c; box-shadow: inset 3px 0 var(--brown); }
+    .tag.effectiveness { box-shadow: inset 3px 0 var(--green); }
+    .training .actions > * { flex: 1 1 auto; }
+    .empty { grid-column: 1 / -1; padding: 1.15rem; border: 1px dashed var(--line); border-radius: .75rem; background: var(--white); color: var(--muted); }
+    .footer { padding-block: 1rem; background: var(--brand); color: #edf7fc; }
+    .footer .brand { padding: .45rem .6rem; background: var(--white); }
+    dialog { width: min(640px, calc(100% - 2rem)); max-height: 85vh; padding: 1.35rem; border: 1px solid var(--line); border-radius: 1.1rem; background: var(--white); color: var(--ink); }
+    dialog::backdrop { background: #102e40a8; }
+    dialog form { display: flex; justify-content: flex-end; }
+    .close { width: 44px; height: 44px; background: var(--white); border: 1px solid var(--line); border-radius: 50%; color: var(--ink); font-size: 1.5rem; }
+    .detail { display: grid; gap: .65rem; }
+    .detail h2 { font-size: 1.75rem; line-height: 1.2; }
+    .detail h3 { font-size: 1.08rem; }
+    .detail p, .detail li { color: var(--muted); }
+    .detail ul { margin: 0; padding-inline-start: 1.35rem; }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-visual { min-height: 295px; }
+    }
+    @media (max-width: 650px) {
+      .shell { width: calc(100% - 2rem); }
+      .nav nav { justify-content: flex-end; gap: .25rem .75rem; }
+      .nav-contact { display: none; }
+      .hero-layout, .custom-layout, .grid { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 230px; }
+      .custom .button { justify-self: start; }
+      .filters { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .filters button { border-radius: .7rem; min-height: 3.25rem; line-height: 1.3; }
+      .filters button[data-filter="all"] { grid-column: 1 / -1; min-height: 44px; }
+      .search { max-width: none; }
+      .footer-layout { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#catalog">Skip to training programmes</a>
+  <header class="masthead">
+    <div class="shell nav">
+      <a class="brand" href="#top"><img src="../logo.png" alt="The Scaling Up Consulting and Training"></a>
+      <nav aria-label="Main navigation"><a href="#catalog">Training catalogue</a><a href="#custom-training">Custom training</a></nav>
+      <a class="nav-contact" href="#contact">Contact us</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Scaling Up Training</p>
+          <h1 id="hero-title">Practical training.<br><span>Tailored to your team.</span></h1>
+          <p>Explore a selection of our training programmes, courses and workshops in workplace skills, leadership, career development and applied AI.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#catalog">Explore the catalogue</a>
+            <a class="button hero-link" href="#custom-training">Custom training for your team</a>
+          </div>
+        </div>
+        <div class="hero-visual"><img src="../hero.webp" alt="Participants working together during a training workshop"></div>
+      </div>
+    </section>
+
+    <section class="custom" id="custom-training" aria-labelledby="custom-title">
+      <div class="shell custom-layout">
+        <div>
+          <p class="eyebrow">Custom training</p>
+          <h2 id="custom-title">Training designed around your needs</h2>
+          <p>This catalogue is a sample of what we deliver. Tell us what your team needs to learn or do differently, and we can adapt the content, activities, duration and delivery format to your goals and work context.</p>
+        </div>
+        <a class="button primary" href="mailto:mina.elokdah@scaling-up.org?subject=Custom%20training%20enquiry">Discuss your training needs</a>
+      </div>
+    </section>
+
+    <section class="section shell" id="catalog" aria-labelledby="catalog-title">
+      <p class="eyebrow">Selected programmes and workshops</p>
+      <h2 id="catalog-title">Training catalogue</h2>
+      <p class="intro">Browse standalone workshops and programmes that combine related workshops. Use the filters to find topics relevant to your team.</p>
+      <div class="controls">
+        <div class="filters" role="group" aria-label="Training category">
+          <button type="button" data-filter="all" aria-pressed="true">All training</button>
+          <button type="button" data-filter="career" aria-pressed="false">Career development</button>
+          <button type="button" data-filter="communication" aria-pressed="false">Communication</button>
+          <button type="button" data-filter="leadership" aria-pressed="false">Leadership and projects</button>
+          <button type="button" data-filter="effectiveness" aria-pressed="false">Personal effectiveness</button>
+          <button type="button" data-filter="ai" aria-pressed="false">Artificial intelligence</button>
+          <button type="button" data-filter="course" aria-pressed="false">Programmes</button>
+        </div>
+        <div class="search"><input id="search" type="search" placeholder="Search training…" aria-label="Search training"></div>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="results" class="grid"></div>
+      <noscript><p>Please enable JavaScript to browse the training catalogue.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="shell footer-layout">
+      <a class="brand" href="#top"><img src="../logo.png" alt="The Scaling Up Consulting and Training"></a>
+      <div class="contact-links">
+        <a href="tel:+201091097333">+20 109 109 7333</a>
+        <a href="https://wa.me/201091097333">WhatsApp</a>
+        <a href="https://www.linkedin.com/company/the-scaling-up/">LinkedIn</a>
+        <a href="https://www.facebook.com/TheScalingUp">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="details" aria-labelledby="detail-title">
+    <form method="dialog"><button class="close" type="submit" aria-label="Close training details">×</button></form>
+    <div id="detail-content"></div>
+  </dialog>
+
+  <script>
+    (() => {
+      "use strict";
+      const items = [
+  {
+    "title": "Workplace Communication Skills",
+    "summary": "Express ideas clearly, listen actively and adapt your communication to the situation.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, employees and team leaders.",
+    "outcomes": [
+      "Explain the elements of effective communication.",
+      "Use active listening and clarifying questions.",
+      "Recognise and use verbal and nonverbal cues.",
+      "Write a clear message for a specific audience and situation.",
+      "Give and receive constructive feedback."
+    ]
+  },
+  {
+    "title": "Designing and Delivering Presentations",
+    "summary": "Turn ideas into engaging presentations and deliver them with confidence.",
+    "category": "communication",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Students, graduates, employees, managers and entrepreneurs.",
+    "outcomes": [
+      "Define the purpose of a presentation and identify audience needs.",
+      "Structure a clear opening, main argument and conclusion.",
+      "Design slides that support the message.",
+      "Use voice and body language to make a point clearly.",
+      "Handle audience questions and feedback."
+    ]
+  },
+  {
+    "title": "Public Speaking",
+    "summary": "Practise prepared and impromptu speaking while learning to manage speaking anxiety.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, professionals and team leaders.",
+    "outcomes": [
+      "Identify common triggers and effects of speaking anxiety.",
+      "Prepare a short talk with a clear central idea.",
+      "Control tone, pace and clarity.",
+      "Use eye contact and body language appropriately.",
+      "Speak without preparation and respond to a question or comment."
+    ]
+  },
+  {
+    "title": "Time Management and Prioritisation",
+    "summary": "Organise your workload, manage deadlines and reduce procrastination.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, employees, managers and entrepreneurs.",
+    "outcomes": [
+      "Audit how you spend your time.",
+      "Prioritise tasks by importance, urgency and impact.",
+      "Turn goals into a practical weekly plan.",
+      "Choose methods for staying focused and breaking down work.",
+      "Adjust your plan as priorities change."
+    ]
+  },
+  {
+    "title": "Leadership Skills",
+    "summary": "Learn how to guide and motivate teams, delegate effectively and build trust.",
+    "category": "leadership",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Team leaders, supervisors, managers and employees preparing for leadership roles.",
+    "outcomes": [
+      "Distinguish leadership from management.",
+      "Choose a leadership approach suited to the task and team.",
+      "Set clear expectations and assign responsibilities.",
+      "Delegate and follow up while preserving team autonomy.",
+      "Use practical techniques to motivate people and build trust."
+    ]
+  },
+  {
+    "title": "Teamwork and Collaboration",
+    "summary": "Improve coordination and share responsibility for common goals.",
+    "category": "leadership",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, employees, graduates and team leaders.",
+    "outcomes": [
+      "Identify the qualities of effective teams and the roles people play.",
+      "Clarify responsibilities and expectations.",
+      "Share information while working on a joint task.",
+      "Build trust and shared accountability.",
+      "Address team disagreements and barriers to collaboration."
+    ]
+  },
+  {
+    "title": "Problem Solving",
+    "summary": "Define the problem, investigate its causes and choose a solution you can evaluate.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, employees, supervisors and managers.",
+    "outcomes": [
+      "Distinguish a problem from its symptoms.",
+      "Use structured questions and tools to find root causes.",
+      "Generate several possible solutions.",
+      "Compare options by impact, effort and risk.",
+      "Plan implementation and define measures to track progress."
+    ]
+  },
+  {
+    "title": "Critical Thinking and Evaluating Information",
+    "summary": "Examine evidence, assumptions and bias to reach more balanced conclusions.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, professionals and managers.",
+    "outcomes": [
+      "Distinguish facts, opinions and assumptions.",
+      "Assess the strength of evidence and credibility of sources.",
+      "Recognise common reasoning errors and biases.",
+      "Ask questions that test claims.",
+      "Draw a conclusion that explains the evidence and its limitations."
+    ]
+  },
+  {
+    "title": "Decision Making",
+    "summary": "Compare options using available information, risks and likely outcomes.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Employees, supervisors, team leaders and managers.",
+    "outcomes": [
+      "Define the decision and the information it requires.",
+      "Generate realistic alternatives and compare their trade-offs.",
+      "Assess likely risks and consequences.",
+      "Choose a decision method suited to the time available and the level of risk.",
+      "Review the outcome and capture lessons for future decisions."
+    ]
+  },
+  {
+    "title": "Emotional Intelligence at Work",
+    "summary": "Recognise emotions, manage your reactions and improve workplace relationships.",
+    "category": "effectiveness",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Employees, graduates, team leaders and managers.",
+    "outcomes": [
+      "Identify your emotions and their triggers.",
+      "Choose responses that help regulate strong emotions.",
+      "Notice others’ cues and check your interpretation.",
+      "Show empathy while maintaining professional boundaries.",
+      "Apply relationship skills in a challenging workplace situation."
+    ]
+  },
+  {
+    "title": "Managing Conflict and Difficult Conversations",
+    "summary": "Understand what drives disagreements and work towards respectful, practical resolutions.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Employees, HR professionals, supervisors and managers.",
+    "outcomes": [
+      "Identify the causes of a conflict and each party’s interests.",
+      "Choose a conflict management approach suited to the situation.",
+      "Use listening and questions to de-escalate tension.",
+      "Lead a difficult conversation using clear, respectful language.",
+      "Agree on a resolution or concrete next steps."
+    ]
+  },
+  {
+    "title": "Negotiation Skills",
+    "summary": "Prepare for negotiations, address objections and reach workable agreements.",
+    "category": "communication",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Sales and HR professionals, managers, entrepreneurs and graduates.",
+    "outcomes": [
+      "Distinguish stated positions from underlying interests.",
+      "Define your objective, limits and alternative before negotiating.",
+      "Use questions and listening to uncover more options.",
+      "Respond to objections and present proposals clearly.",
+      "Document an agreement with clear commitments and next steps."
+    ]
+  },
+  {
+    "title": "Stress Management and Resilience",
+    "summary": "Recognise sources of stress and develop healthy ways to manage them at work or while studying.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, employees, managers and other professionals.",
+    "outcomes": [
+      "Identify stressors and recognise your personal warning signs.",
+      "Separate what you can change from what is outside your control.",
+      "Practise short techniques for calming down and refocusing.",
+      "Manage workloads and set personal boundaries under pressure.",
+      "Create a plan for recurring sources of stress."
+    ]
+  },
+  {
+    "title": "Adaptability and Managing Change",
+    "summary": "Respond to uncertainty and keep learning as roles and work environments change.",
+    "category": "effectiveness",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "Students, graduates, employees and team leaders.",
+    "outcomes": [
+      "Identify how a change affects roles and tasks.",
+      "Recognise your reactions to change.",
+      "Ask questions to identify what you know and what you need to learn.",
+      "Try strategies for working through uncertainty.",
+      "Choose a concrete next step to learn or adapt."
+    ]
+  },
+  {
+    "title": "Creative Thinking and Innovation",
+    "summary": "Generate ideas and turn them into solutions or improvements you can try out.",
+    "category": "effectiveness",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, entrepreneurs, employees and managers.",
+    "outcomes": [
+      "Identify a problem or opportunity that would benefit from new ideas.",
+      "Apply several methods for generating ideas.",
+      "Delay judgement and assess ideas against clear criteria.",
+      "Turn a selected idea into a prototype or initial experiment.",
+      "Present an idea and ask for feedback that will improve it."
+    ]
+  },
+  {
+    "title": "Self-Awareness and Professional Confidence",
+    "summary": "Understand your strengths, values and development areas to build professional confidence.",
+    "category": "career",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, job seekers and other professionals.",
+    "outcomes": [
+      "Identify strengths and development areas using real examples.",
+      "Clarify your professional values and interests.",
+      "Recognise and question beliefs that undermine confidence.",
+      "Describe your capabilities and achievements professionally.",
+      "Set a development goal and define follow-up steps."
+    ]
+  },
+  {
+    "title": "Business Etiquette and Professional Conduct",
+    "summary": "Handle meetings, correspondence and day-to-day interactions with colleagues and customers professionally.",
+    "category": "career",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "Students, graduates, employees and customer service teams.",
+    "outcomes": [
+      "Recognise expected behaviour in common workplace situations.",
+      "Participate and listen effectively in meetings.",
+      "Choose an appropriate approach for calls and digital communication.",
+      "Introduce yourself professionally.",
+      "Respond tactfully to colleagues and customers in different situations."
+    ]
+  },
+  {
+    "title": "Ethical Influence and Persuasion",
+    "summary": "Present ideas clearly, build credibility and respond to objections with integrity.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Sales and HR professionals, managers, team leaders and entrepreneurs.",
+    "outcomes": [
+      "Distinguish professional influence from manipulation.",
+      "Identify what matters to the other party.",
+      "Build an argument supported by reasons and examples.",
+      "Use stories and evidence to support your message.",
+      "Respond to objections respectfully and transparently."
+    ]
+  },
+  {
+    "title": "Professional Email Writing",
+    "summary": "Write clear, concise emails in English for common workplace situations.",
+    "category": "communication",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "Students, graduates, employees and administrative professionals.",
+    "outcomes": [
+      "Write a subject line that conveys the purpose.",
+      "Structure an email with an opening, purpose, details and next step.",
+      "Choose a tone and wording suited to the recipient.",
+      "Write clear, courteous requests, follow-ups and reminders.",
+      "Review a message for ambiguity and common errors."
+    ]
+  },
+  {
+    "title": "Building a Professional LinkedIn Profile",
+    "summary": "Improve your headline, showcase your projects and skills, and practise reaching out to recruiters.",
+    "category": "career",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "University students, graduates and job seekers.",
+    "outcomes": [
+      "Write a headline that reflects your field and target role.",
+      "Write a short summary that connects strengths to experience or projects.",
+      "Organise your experience, education and skills and add relevant work samples.",
+      "Identify keywords from a job advert and use them naturally.",
+      "Write a professional message to someone in your field or a recruiter."
+    ]
+  },
+  {
+    "title": "Writing a CV from Scratch",
+    "summary": "Leave with a draft CV tailored to a target role, even if you have limited experience.",
+    "category": "career",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "University students, graduates and people seeking their first job or internship.",
+    "outcomes": [
+      "Identify relevant skills and keywords in a job advert.",
+      "Order CV sections to suit the role and your level of experience.",
+      "Use projects, volunteering and training as evidence of skills.",
+      "Write concise bullets and quantify achievements where possible.",
+      "Draft a CV and review its formatting and clarity before sending it."
+    ]
+  },
+  {
+    "title": "Job Interview Skills",
+    "summary": "Prepare answers to common questions, practise in a short mock interview and get feedback.",
+    "category": "career",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "Graduates, job seekers and internship applicants.",
+    "outcomes": [
+      "Identify job requirements and prepare relevant talking points.",
+      "Introduce yourself in one minute and connect your experience to the role.",
+      "Answer behavioural questions with the STAR method.",
+      "Prepare questions about the role, team and next steps.",
+      "Complete a short mock interview and identify where to improve."
+    ]
+  },
+  {
+    "title": "Career Planning and Interview Preparation",
+    "summary": "Connect your career goals to your CV, professional profile and interview preparation.",
+    "category": "career",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "University students, graduates, job seekers and career changers.",
+    "outcomes": [
+      "Set a career goal and identify practical steps towards it.",
+      "Tailor your CV to a specific opportunity.",
+      "Present your experience and skills more clearly in your professional profile.",
+      "Answer interview questions with structured examples.",
+      "Practise an interview and decide what to improve."
+    ]
+  },
+  {
+    "title": "Customer Service Excellence",
+    "summary": "Understand customer needs, deliver consistent service and handle complaints in ways that rebuild trust.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Customer service, front desk and sales teams, and anyone in a customer-facing role.",
+    "outcomes": [
+      "Distinguish customer service from customer experience.",
+      "Ask questions that uncover customer needs and expectations.",
+      "Communicate professionally across service channels.",
+      "Handle complaints and difficult situations through clear steps.",
+      "Propose a solution and follow-up that can restore trust."
+    ]
+  },
+  {
+    "title": "Coaching and Mentoring Skills",
+    "summary": "Lead conversations that help colleagues set goals, learn and take responsibility for their development.",
+    "category": "leadership",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Managers, supervisors, HR professionals, team leaders and mentors.",
+    "outcomes": [
+      "Distinguish coaching, mentoring and managerial direction.",
+      "Agree on the purpose and expectations of a conversation.",
+      "Use questioning and listening to help the other person think through options.",
+      "Give specific feedback that supports development.",
+      "Turn a conversation into an action plan and follow up on progress."
+    ]
+  },
+  {
+    "title": "Cross-Cultural Communication and Collaboration",
+    "summary": "Work respectfully with people from different backgrounds and with different communication styles.",
+    "category": "communication",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Diverse teams and professionals in HR, international business and customer service.",
+    "outcomes": [
+      "Explain how values and context can shape workplace behaviour.",
+      "Recognise differences in communication styles without stereotyping.",
+      "Adapt your approach to people and situations.",
+      "Identify and question assumptions and biases.",
+      "Address cultural misunderstandings constructively and inclusively."
+    ]
+  },
+  {
+    "title": "Project Management Fundamentals",
+    "summary": "Plan, track and close a small project using practical coordination tools.",
+    "category": "leadership",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Graduates, project coordinators, administrators, team members and new managers.",
+    "outcomes": [
+      "Define project objectives, scope and deliverables.",
+      "Break work into tasks and milestones.",
+      "Identify stakeholders and key responsibilities.",
+      "Track dependencies, risks and indicators of progress.",
+      "Prepare a status update and a project closeout review."
+    ]
+  },
+  {
+    "title": "Professional Networking and Relationship Building",
+    "summary": "Introduce yourself, start professional conversations and build lasting relationships at events and online.",
+    "category": "career",
+    "hours": 3,
+    "sessions": 1,
+    "audience": "University students, graduates, job seekers, entrepreneurs and sales professionals.",
+    "outcomes": [
+      "Set a realistic networking goal.",
+      "Give a clear, concise professional introduction.",
+      "Start a conversation and ask relevant questions.",
+      "Use platforms and events to build genuine connections.",
+      "Write a personalised follow-up and stay in touch."
+    ]
+  },
+  {
+    "title": "Introduction to AI and Its Applications",
+    "summary": "Understand the main types of AI and explore practical, responsible applications.",
+    "category": "ai",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, graduates, professionals, business owners and others interested in AI.",
+    "outcomes": [
+      "Explain basic AI concepts.",
+      "Distinguish conventional AI, machine learning and generative AI.",
+      "Identify tools and applications in different sectors.",
+      "Recognise suitable uses for real tasks.",
+      "Discuss limitations, risks and responsible use."
+    ]
+  },
+  {
+    "title": "Prompt Writing for Generative AI",
+    "summary": "Use clear instructions, context and examples to improve the output of generative AI tools.",
+    "category": "ai",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Students, content creators, marketers, HR professionals, managers and employees.",
+    "outcomes": [
+      "Explain how wording affects the output.",
+      "Write a prompt that specifies the task, context, audience and format.",
+      "Use examples and constraints to improve a response.",
+      "Review outputs for accuracy and relevance.",
+      "Refine prompts iteratively based on the results."
+    ]
+  },
+  {
+    "title": "AI for Content Creation",
+    "summary": "Use AI to plan, create and refine written and visual content.",
+    "category": "ai",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Content creators, marketers, entrepreneurs, students and communications teams.",
+    "outcomes": [
+      "Choose an AI tool suited to the content task.",
+      "Draft written content and edit it for quality.",
+      "Generate ideas for posts or a consistent content calendar.",
+      "Explore tools for images, presentations and video.",
+      "Check factual accuracy, usage rights and consistency with brand voice."
+    ]
+  },
+  {
+    "title": "AI Tools for Workplace Productivity",
+    "summary": "Apply AI to everyday writing, summarising and information management tasks.",
+    "category": "ai",
+    "hours": 6,
+    "sessions": 2,
+    "audience": "Employees, team leaders, administrators, HR professionals, students and business owners.",
+    "outcomes": [
+      "Select a tool for a specific work task.",
+      "Turn notes into a summary or an action list.",
+      "Draft correspondence and reports with AI.",
+      "Design a simple workflow for a recurring task.",
+      "Verify AI outputs and protect sensitive information."
+    ]
+  },
+  {
+    "title": "AI for Business, Marketing and Customer Experience",
+    "summary": "Explore how AI can support market research, marketing, customer service and business decisions.",
+    "category": "ai",
+    "hours": 9,
+    "sessions": 3,
+    "audience": "Business owners, entrepreneurs, marketing, sales and customer service teams, and students.",
+    "outcomes": [
+      "Identify practical AI opportunities in a business.",
+      "Use AI tools to support initial market and competitor research.",
+      "Sketch a customer segment or marketing campaign.",
+      "Design a draft conversation flow for customer service.",
+      "Define evaluation measures that account for human review and data protection."
+    ]
+  },
+  {
+    "title": "Effective Communication at Work",
+    "summary": "A programme covering everyday communication, presentation skills, professional emails and business etiquette.",
+    "category": "course",
+    "hours": 21,
+    "sessions": 7,
+    "modules": [
+      "Workplace Communication Skills",
+      "Designing and Delivering Presentations",
+      "Professional Email Writing",
+      "Business Etiquette and Professional Conduct"
+    ]
+  },
+  {
+    "title": "Personal Effectiveness",
+    "summary": "A practical programme on managing time and stress, adapting to change and developing self-awareness.",
+    "category": "course",
+    "hours": 21,
+    "sessions": 7,
+    "modules": [
+      "Time Management and Prioritisation",
+      "Stress Management and Resilience",
+      "Adaptability and Managing Change",
+      "Self-Awareness and Professional Confidence"
+    ]
+  },
+  {
+    "title": "Team Leadership and People Development",
+    "summary": "Combine leadership, collaboration, coaching and emotional intelligence to support team and individual development.",
+    "category": "course",
+    "hours": 33,
+    "sessions": 11,
+    "modules": [
+      "Leadership Skills",
+      "Teamwork and Collaboration",
+      "Coaching and Mentoring Skills",
+      "Emotional Intelligence at Work"
+    ]
+  },
+  {
+    "title": "Critical Thinking, Problem Solving and Decision Making",
+    "summary": "Move from evaluating information and defining problems to generating alternatives and making decisions.",
+    "category": "course",
+    "hours": 24,
+    "sessions": 8,
+    "modules": [
+      "Critical Thinking and Evaluating Information",
+      "Problem Solving",
+      "Decision Making",
+      "Creative Thinking and Innovation"
+    ]
+  },
+  {
+    "title": "Career Readiness and Professional Networking",
+    "summary": "Prepare for the job market, introduce yourself professionally, build relationships and present your ideas with confidence.",
+    "category": "course",
+    "hours": 24,
+    "sessions": 8,
+    "modules": [
+      "Career Planning and Interview Preparation",
+      "Professional Networking and Relationship Building",
+      "Public Speaking",
+      "Ethical Influence and Persuasion"
+    ]
+  },
+  {
+    "title": "Customer Experience and Business Relationships",
+    "summary": "Build skills in customer service, negotiation, cross-cultural communication and conflict management.",
+    "category": "course",
+    "hours": 27,
+    "sessions": 9,
+    "modules": [
+      "Customer Service Excellence",
+      "Negotiation Skills",
+      "Cross-Cultural Communication and Collaboration",
+      "Managing Conflict and Difficult Conversations"
+    ]
+  },
+  {
+    "title": "AI at Work and for Content Creation",
+    "summary": "Progress from AI fundamentals and prompt writing to applications in productivity, content and business.",
+    "category": "course",
+    "hours": 36,
+    "sessions": 12,
+    "modules": [
+      "Introduction to AI and Its Applications",
+      "Prompt Writing for Generative AI",
+      "AI Tools for Workplace Productivity",
+      "AI for Content Creation",
+      "AI for Business, Marketing and Customer Experience"
+    ]
+  },
+  {
+    "title": "Project Delivery and Team Collaboration",
+    "summary": "Plan a small project, share responsibility, solve problems and follow through on decisions.",
+    "category": "course",
+    "hours": 27,
+    "sessions": 9,
+    "modules": [
+      "Project Management Fundamentals",
+      "Teamwork and Collaboration",
+      "Problem Solving",
+      "Decision Making"
+    ]
+  }
+];
+      const categories = {
+        career: "Career development",
+        communication: "Communication",
+        leadership: "Leadership and projects",
+        effectiveness: "Personal effectiveness",
+        ai: "Artificial intelligence",
+        course: "Programme"
+      };
+      const results = document.getElementById("results");
+      const search = document.getElementById("search");
+      const count = document.getElementById("result-count");
+      const dialog = document.getElementById("details");
+      const details = document.getElementById("detail-content");
+      const filters = [...document.querySelectorAll("[data-filter]")];
+      let category = "all";
+      let opener;
+
+      function element(tag, value, className) {
+        const node = document.createElement(tag);
+        if (value) node.textContent = value;
+        if (className) node.className = className;
+        return node;
+      }
+
+      function whatsapp(message) {
+        return "https://wa.me/201091097333?text=" + encodeURIComponent(message);
+      }
+
+      function enquiry(item) {
+        const action = element("a", "Enquire", "button primary");
+        action.href = whatsapp("Hello Scaling Up, I would like more information about " + item.title + ".");
+        action.target = "_blank";
+        action.rel = "noopener noreferrer";
+        action.setAttribute("aria-label", "Enquire about " + item.title + " on WhatsApp");
+        return action;
+      }
+
+      function duration(item) {
+        return item.hours + " hours · " + item.sessions + (item.sessions === 1 ? " session" : " sessions");
+      }
+
+      function addList(container, heading, entries) {
+        const list = element("ul");
+        for (const entry of entries) list.append(element("li", entry));
+        container.append(element("h3", heading), list);
+      }
+
+      function showDetails(item, trigger) {
+        opener = trigger;
+        const panel = element("div", null, "detail");
+        const heading = element("h2", item.title);
+        heading.id = "detail-title";
+        panel.append(
+          element("p", categories[item.category], "eyebrow"),
+          heading,
+          element("p", item.summary),
+          element("p", "Typical duration: " + duration(item))
+        );
+        if (item.audience) panel.append(element("h3", "Who it is for"), element("p", item.audience));
+        if (item.outcomes) addList(panel, "Learning outcomes", item.outcomes);
+        if (item.modules) addList(panel, "Included workshops", item.modules);
+        const actions = element("div", null, "actions");
+        actions.append(enquiry(item));
+        panel.append(actions);
+        details.replaceChildren(panel);
+        dialog.showModal();
+      }
+
+      function card(item) {
+        const article = element("article", null, "training");
+        const meta = element("div", null, "meta");
+        meta.append(element("span", categories[item.category], "tag " + item.category), element("span", duration(item)));
+        const actions = element("div", null, "actions");
+        const button = element("button", "View details", "button secondary");
+        button.type = "button";
+        button.setAttribute("aria-label", "View details for " + item.title);
+        button.addEventListener("click", () => showDetails(item, button));
+        actions.append(button, enquiry(item));
+        article.append(meta, element("h3", item.title), element("p", item.summary), actions);
+        return article;
+      }
+
+      function render() {
+        const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        const visible = items.filter(item => {
+          if (category !== "all" && item.category !== category) return false;
+          const searchable = [item.title, item.summary, categories[item.category], ...(item.modules || [])].join(" ").toLowerCase();
+          return terms.every(term => searchable.includes(term));
+        });
+        count.textContent = visible.length + (visible.length === 1 ? " training option" : " training options");
+        results.replaceChildren(...(visible.length ? visible.map(card) : [element("p", "No training matches your search. Try another keyword or category.", "empty")]));
+      }
+
+      for (const filter of filters) {
+        filter.addEventListener("click", () => {
+          category = filter.dataset.filter;
+          for (const button of filters) button.setAttribute("aria-pressed", String(button === filter));
+          render();
+        });
+      }
+      search.addEventListener("input", render);
+      dialog.addEventListener("close", () => opener?.focus());
+      render();
+    })();
+  </script>
+</body>
+</html>
